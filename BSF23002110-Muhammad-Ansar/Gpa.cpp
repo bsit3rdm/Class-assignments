@@ -14,10 +14,16 @@ int creditHours,totalCrHr=0;
 	{
 		gp = (marks - 50) * 0.05 + 2;
 		credits = gp * creditHours;
-		totalCredits+=credits;
-		totalCrHr+=creditHours;
 		
 	}
+	else if(marks>90 && marks<=100){
+		credits=4*creditHours;
+	}
+	else if(marks<50 && marks>=0){
+		cout<<"\nOops!You failed this subject!";
+	}
+		totalCredits+=credits;
+		totalCrHr+=creditHours;
 }
 
 
