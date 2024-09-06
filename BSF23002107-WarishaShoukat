@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+int numSubjects;
+float totalGradePoints = 0, totalCredits = 0;
+cout<<"Enter the number of subjects"<<endl;
+cin >>numSubjects;
+  for(int i= 1; i<=numSubjects;i++){
+float credits, grades;
+cout<<"Enter the credit hours for subject"<< i<<":"<<endl;
+cin>>credits;
+cout<<"Enter the grade obtained for subject"<< i<<"(out of 10):"<<endl;
+cin>>grades;
+		totalGradePoints+= credits * grades;
+		totalCredits += credits;
+	}
+	if (totalCredits >0){
+		float cgpa = totalGradePoints/ totalCredits;
+	cout<<"\n The CGPA of the student is:"<<cgpa<<endl;
+	}
+		else{
+			cout<<"Total credits cannot be zero."<<endl;
+		}
+	return 0;
+}
