@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numSubjects;
+        cout << "Enter the number of subjects: ";
+    cin >> numSubjects;
+double totalGradePoints = 0.0;
+    int totalCredits = 0;
+
+    for (int i = 0; i < numSubjects; i++) {
+        double gradePoint;
+        int credit;
+        
+        cout << "Enter grade point for subject " << i + 1 << ": ";
+        cin >> gradePoint;
+        
+        cout << "Enter credit for subject " << i + 1 << ": ";
+       cin >> credit;
+
+        totalGradePoints += gradePoint * credit;
+        totalCredits += credit;
+    }
+ double cgpa = totalGradePoints / totalCredits;
+
+    cout << "The CGPA is: " << cgpa << endl;
+return 0;}
+
+
+
+        
